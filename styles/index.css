@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #1abc78;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    color: yellow !important;
+}
+
+.main-banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.club-section {
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.club-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    transition: 0.3s ease;
+    width: 220px;
+    box-sizing: border-box;
+    color: blue;
+}
+
+.club-card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.6);
+    transform: translateY(-5px);
+}
+
+.club-card img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+h2 {
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #1abc78;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #1abc78;
+    color: white;
+    padding: 10px;
+}
+
+.content-link {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        padding: 8px 0;
+    }
+
+    .main-banner img {
+        height: 250px;
+    }
+
+    .club-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .main-banner img {
+        height: 180px;
+    }
+
+    .club-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}

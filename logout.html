@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login- ULAB Clubs</title>
+    <link rel="stylesheet" href="styles/logout.css">
+    <link rel="shortcut icon" href="icons/Website.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="home.html"><img src="images/ULAB-logo.webp" alt="ULAB Logo" height="40"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="terms.html">Terms</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="" class="active">Log out</a>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+        <img class="hero-img" src="images/logout.jpg" alt="emniiiiii">
+
+        <div class="login-overlay">
+            <div class="login">
+                <h2 class="log-text">Log in</h2>
+            </div>
+            <form action="register.php" method="POST" onsubmit="return validateForm()">
+                <label>Student Id:</label>
+                <input type="text" name="student_id" id="student_id" placeholder="Enter your ULAB ID" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your ULAB email" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" id="password" required>
+
+                <button type="submit">Log in</button>
+                <button type="button" class="forgot-btn">Forgot Account?</button>
+                <a href="register.html" style="text-decoration: none;"><button type="button"
+                        class="register-btn">Register if you don't have any account</button></a>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed By MD. TARIQUL ISLAM</p>
+        <div class="content-link">
+            <a href="https://web.facebook.com/tariqul.soykot.01" class="footer-icon">
+                <img src="icons/facebook.png" alt="Facebook link" height="24">
+            </a>
+            <a href="https://www.instagram.com/tariqul.soykot.001/" class="footer-icon">
+                <img src="icons/instagram.png" alt="Instagram link" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/tar1qul/" class="footer-icon">
+                <img src="icons/Linkedin.png" alt="Linkedin Link" height="24">
+            </a>
+            <a href="https://tar1qul.github.io/Portfolio-web-page-design-with-raw-HTML-CSS/" class="footer-icon">
+                <img src="icons/Portfolio.png" alt="Portfolio web page" height="24">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            let mobile = document.getElementById("mobile").value;
+            let password = document.getElementById("password").value;
+
+            if (!/^\d{11}$/.test(mobile)) {
+                alert("Mobile number must be exactly 11 digits.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
